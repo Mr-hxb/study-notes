@@ -8,7 +8,7 @@
 过程：
 
 1. ESLint引用是在build/webpack.base.conf.js中，配置是在.eslintrc.js中
-2. 阅读[ESLint](http://eslint.cn/docs/user-guide/configuring) 规则
+2. 阅读[ESLint](http://eslint.cn/docs/user-guide/configuring) 规则
 3. 解决缩进问题，添加规则
 
         'indent': [2, 4, { 'SwitchCase': 1 }], // 缩进风格, switch, case中使用缩进
@@ -24,11 +24,11 @@
                 'ignores': []
             }
         ], // 在template中强制执行一致的缩进
-4. 解决以';'号结尾问题
+4. 解决以';'号结尾问题
 
         'semi': [2, 'always'], // 语句强制分号结尾
 
-总结：eslint规则的制定可以初步让我们代码避免一些错误，同时在协同开发的时候，具有更好的规范。
+总结：eslint规则的制定可以初步让我们代码避免一些错误，同时在协同开发的时候，具有更好的规范。
 
 > require和import的使用
 
@@ -42,9 +42,9 @@
 
 1. require/exports是CommonJS的一部分，而import/export是ES6新规范
 
-    
     ‘引申关于CommonJS的定义：CommonJS是一套模版系统的规范，把项目中的api打包成一个模版，通过require方法读取一个文件，并返回这个文件内部的exports对象’
-2. import是编译时的，require是运行时的，意思是import必须放在文件的开头，而require可以放在代码任何地方。
+
+2. import是编译时的，require是运行时的，意思是import必须放在文件的开头，而require可以放在代码任何地方。
 3. import是一个解构过程，需要通过解构赋值给变量，require同样也可以，但是它也可以直接像函数一样调用
 4. import中有default关键字，导入模板时也有*符号，更加灵活多变
 
